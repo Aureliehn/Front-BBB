@@ -14,7 +14,7 @@ export class DateFilterPipe implements PipeTransform {
         return items.filter(item => {
             let itemDate = new Date(item.date);
             let diff = Math.floor((currentDate.getTime() - itemDate.getTime()) / (1000 * 3600 * 24));
-            return diff <= 90;
+            return diff <= 200;
         });
     }
 }

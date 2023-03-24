@@ -13,7 +13,7 @@ export class ActuService {
   ) { }
 
   public getActu(){
-    return this.http.get<CLUB.Actu []>(`${BASE_URL}/actu`,{
+    return this.http.get<CLUB.Actu []>('https://basketballbrivadois.up.railway.app/api/actu',{
     })
   }
 }

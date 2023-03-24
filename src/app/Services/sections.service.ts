@@ -15,12 +15,12 @@ export class SectionsService {
   ) { }
 
   public getSectionById(id:number){
-    return this.http.get<PLAYER.section []>(`${BASE_URL}/section/${id}`,{
+    return this.http.get<PLAYER.section []>(`https://basketballbrivadois.up.railway.app/api/section/${id}`,{
     })
   }
 
   public getTeamBySection(section:number){
-    return this.http.get<PLAYER.team>(`api/equipe/?section=${section}`,{
+    return this.http.get<PLAYER.team>(`https://basketballbrivadois.up.railway.app/api/equipe/?section=${section}`,{
     })}
 
 }

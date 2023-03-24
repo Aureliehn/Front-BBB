@@ -13,8 +13,10 @@ export class TrainingService {
     ) { }
     
   public getAllTraining(){
-    return this.http.get<TRAINING.training[]>(`${BASE_URL}/entrainement`,{
-    })
+    return this.http.get<TRAINING.training[]>('https://basketballbrivadois.up.railway.app/api/entrainement/',{
+      withCredentials: true
+    }
+)
   }
 
 }

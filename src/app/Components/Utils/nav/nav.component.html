@@ -17,12 +17,12 @@
   <div class="cont-items mt-2" [ngClass]="{'responsive': menuMobile === true}">
     <a href="" class="items"><img *ngIf="menuMobile == true" src="assets/logoBBB.png" alt="logo basket ball brioude"
         class="logo-items"></a>
-    <a [routerLink]="['/accueil']" class="items">ACCUEIL</a>
+    <a [routerLink]="['/accueil']" class="items" (click)="active=false" (click)="menuMobile=false">ACCUEIL</a>
     <a class="items dropbtn" *ngIf="menuMobile == false" (click)="dropdownClick()">LE CLUB</a>
-    <a [routerLink]="['/club/presentation']" *ngIf="menuMobile == true" class="items a-drop">ENCADREMENT</a>
-    <a [routerLink]="['/club/training']" *ngIf="menuMobile == true" class="items a-drop">ENTRAINEMENTS</a>
-    <a [routerLink]="['/partenaires']" *ngIf="menuMobile == true" class="items a-drop">PARTENAIRES</a>
-    <a [routerLink]="['/infos']" *ngIf="menuMobile == true" class="items a-drop">INFOS PRATIQUES</a>
+    <a [routerLink]="['/club/presentation']" *ngIf="menuMobile == true" (click)="active=false" (click)="menuMobile=false" class="items a-drop">ENCADREMENT</a>
+    <a [routerLink]="['/club/training']" *ngIf="menuMobile == true" (click)="active=false" (click)="menuMobile=false" class="items a-drop">ENTRAINEMENTS</a>
+    <a [routerLink]="['/partenaires']" *ngIf="menuMobile == true" (click)="active=false" (click)="menuMobile=false" class="items a-drop">PARTENAIRES</a>
+    <a [routerLink]="['/infos']" *ngIf="menuMobile == true" (click)="active=false" (click)="menuMobile=false" class="items a-drop">INFOS PRATIQUES</a>
 
 
     <!-- <a [routerLink]="['/section/1']" class="items " (click)="active=false" (click)="menuMobile=false ">ECOLE DE
@@ -37,10 +37,10 @@
     <a href="" class="items" (click)="goToWebsite()">BOUTIQUE</a>
 
     <div class="dropdown-content " *ngIf="dropdown">
-      <a [routerLink]="['/club/presentation']" class="items a-drop">ENCADREMENT</a>
-      <a [routerLink]="['/club/training']" class="items a-drop">ENTRAINEMENTS</a>
-      <a [routerLink]="['/partenaires']" class="items a-drop">PARTENAIRES</a>
-      <a [routerLink]="['/infos']" class="items a-drop">INFOS PRATIQUES</a>
+      <a [routerLink]="['/club/presentation']" (click)="dropdown=false" class="items a-drop">ENCADREMENT</a>
+      <a [routerLink]="['/club/training']" (click)="dropdown=false" class="items a-drop">ENTRAINEMENTS</a>
+      <a [routerLink]="['/partenaires']" (click)="dropdown=false" class="items a-drop">PARTENAIRES</a>
+      <a [routerLink]="['/infos']" (click)="dropdown=false" class="items a-drop">INFOS PRATIQUES</a>
     </div>
   </div>
 

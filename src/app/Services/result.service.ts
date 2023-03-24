@@ -13,7 +13,7 @@ export class ResultService {
     ) { }
 
   public  getResult(){
-    return this.http.get<DASHBOARD.Result[]>(`${BASE_URL}/match`,{
+    return this.http.get<DASHBOARD.Result[]>('https://basketballbrivadois.up.railway.app/api/match',{
     })
   }
 }

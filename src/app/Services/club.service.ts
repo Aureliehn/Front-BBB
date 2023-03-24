@@ -13,11 +13,11 @@ export class ClubService {
     ) { }
 
   public getTeamMembers(){
-    return this.http.get< CLUB.Pole []>(`${BASE_URL}/profil`,{
+    return this.http.get< CLUB.Pole []>(`https://basketballbrivadois.up.railway.app/api/profil`,{
     })
   }
   public getLicence(){
-    return this.http.get<CLUB.Licence []>(`${BASE_URL}/licence`)
+    return this.http.get<CLUB.Licence []>(`https://basketballbrivadois.up.railway.app/api/licence`)
   }
 
 }

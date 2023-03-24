@@ -35,7 +35,7 @@ export class GaleryDetailComponent implements OnInit {
           this.album.photos = this.album.photos.map(d => {
             return {
               ...d,
-              img: `http://localhost:8000/${d.img}`
+              img: `https://basketballbrivadois.up.railway.app${d.img}`
             };
           });
         }

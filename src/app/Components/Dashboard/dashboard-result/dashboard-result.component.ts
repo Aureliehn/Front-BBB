@@ -35,7 +35,6 @@ export class DashboardResultComponent implements OnInit {
       .subscribe(res => {
         this.result = res.slice(1,6);
         this.dataNull = this.result.length === 0;
-        console.log(this.result, 'r')
       });
   }
 

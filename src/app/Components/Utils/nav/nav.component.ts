@@ -35,7 +35,6 @@ public idSection: number = 0
   }
   goToSection(id:number){
     if(this.idSection != id){
-      console.log(this.menuMobile, "m")
       this.menuMobile =false
       this.active =false
       this.idSection = id

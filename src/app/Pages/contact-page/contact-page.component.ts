@@ -50,7 +50,7 @@ export class ContactPageComponent implements OnInit {
   }
 
   public postDataFormContact(contact) {
-    this.http.post(BASE_URL + '/contact-form/', {
+    this.http.post('https://basketballbrivadois.up.railway.app/api/contact-form/', {
         titre: 'Demande de Contact',
         message: contact.message,
         prenom: contact.prenom,

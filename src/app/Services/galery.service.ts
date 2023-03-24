@@ -13,11 +13,11 @@ export class GaleryService {
   ) { }
 
   public getAlbum(){
-    return this.http.get<PICTURES.Album[]>(`${BASE_URL}/album`,{
+    return this.http.get<PICTURES.Album[]>(`https://basketballbrivadois.up.railway.app/api/album`,{
     })
   }
   public getPicturesByAlbum(album: number){
-    return this.http.get<PICTURES.Photo[]>(`${BASE_URL}/album/${album}`,{
+    return this.http.get<PICTURES.Photo[]>(`https://basketballbrivadois.up.railway.app/api/album/${album}`,{
     })
   }
 }

@@ -13,7 +13,7 @@ export class UpcomingService {
     ) { }
 
   public getUpcoming(){
-    return this.http.get<DASHBOARD.Upcoming[]>(`${BASE_URL}/match`,{
+    return this.http.get<DASHBOARD.Upcoming[]>(`https://basketballbrivadois.up.railway.app/api/match`,{
     })
   }
 }

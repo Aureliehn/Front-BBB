@@ -10,7 +10,7 @@ export class PartnersService {
   constructor(private http: HttpClient) { }
 
   public getAllPartners(){
-    return this.http.get<CLUB.Partners[]>(`${BASE_URL}/partenaire`,{
+    return this.http.get<CLUB.Partners[]>(`https://basketballbrivadois.up.railway.app/api/partenaire`,{
     })
   }
 

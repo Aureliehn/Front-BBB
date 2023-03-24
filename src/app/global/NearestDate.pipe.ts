@@ -5,6 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class NearestDatePipe implements PipeTransform {
   transform(items: any[], currentDate: Date): any[] {
+    currentDate = currentDate
     if (!items) {
       return [];
     }

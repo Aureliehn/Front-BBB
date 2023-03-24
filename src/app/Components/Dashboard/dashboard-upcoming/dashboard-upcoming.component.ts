@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { tap } from 'rxjs/operators';
 import { DASHBOARD } from 'src/app/bbb';
 import { SharedDashboardService } from 'src/app/Services/shared-dashboard.service';
+import { formatDate } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard-upcoming',
@@ -12,13 +13,15 @@ import { SharedDashboardService } from 'src/app/Services/shared-dashboard.servic
 export class DashboardUpcomingComponent implements OnInit {
   public result: DASHBOARD.Upcoming[]=[];
   public section: number = 3
-  public currentDate: Date;
+  public currentDate:Date = new Date();
+  public MyData: string;
   public dataNull: boolean = false;
   
   constructor(private sharedService: SharedDashboardService) {}
 
   ngOnInit(): void {
     this.getMatch();
+    this.MyData = formatDate(this.currentDate,'yyyy-MM-dd',"en-US");   
   }
   public getMatch(section: number = 3) {
     this.sharedService.getResult(section)
